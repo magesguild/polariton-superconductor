@@ -57,7 +57,7 @@
     \normalsize Universal City, Texas, USA
 }
 
-\date{\small November 8, 2026 (Hardened Production Release v2.0)}
+\date{\small November 8, 2026 (Hardened Production Release v2.1)}
 
 \begin{document}
 
@@ -213,7 +213,7 @@ To reproduce and fabricate PPPS-2 thin-film heterostructures, wet-lab facilities
 \subsection{Step 1: Substrate Preparation \& B-Site Termination}
 \begin{itemize}
     \item Single-crystal (001) $(La,Sr)(Al,Ta)O_6$ (LSAT) ($10 \times 10 \times 0.5\text{ mm}$, MTI Corp).
-    \item Etch in buffered HF solution for $30\text{ s}$ and anneal in flowing $O_2$ at $1000^\circ\text{C}$ for $2\text{ hours}$ to obtain uniform \textbf{$B$-site $[(Al,Ta)O_2]$ surface termination}.
+    \item Etch in buffered HF solution for $30\text{ s}$ and anneal in flowing $O_2$ at $1000^\circ\text{C}$ for $2\text{ hours}$ to achieve a uniform \textbf{$B$-site $[(Al,Ta)O_2]$-terminated terrace surface}.
 \end{itemize}
 
 \subsection{Step 2: Epitaxial Layer Deposition (PLD / MBE)}
@@ -222,7 +222,7 @@ To reproduce and fabricate PPPS-2 thin-film heterostructures, wet-lab facilities
     \item \textbf{Substrate Temperature:} $720^\circ\text{C}$ in dynamic oxygen pressure $P(O_2) = 150\text{ mTorr}$.
     \item \textbf{Sequence:}
     \begin{enumerate}
-        \item Deposit $0.4\text{ nm}$ ($1$ unit cell) epitaxial $LaNiO_3$ starting with $[LaO]^{+1}$ monolayer to enforce interface formation between $[CuO_2]^{2-}$ and $[NiO_2]^{-1}$.
+        \item Deposit $0.4\text{ nm}$ ($1$ unit cell) epitaxial $LaNiO_3$ starting with an initial $[LaO]^{+1}$ sub-monolayer followed by $[NiO_2]^{-1}$, ensuring the subsequent $Sr_{0.85}La_{0.15}CuO_2$ bilayer interfaces directly with the $[NiO_2]$ orbital-hybridization plane under a deterministic electrostatic dipole boundary.
         \item Alternate target to stoichiometric infinite-layer $Sr_{0.85}La_{0.15}CuO_2$; deposit $1.2\text{ nm}$ ($2$ unit cells) monitored via live in-situ RHEED oscillations.
         \item Deposit $5\text{ nm}$ low-loss $Al_2O_3$ capping dielectric.
     \end{enumerate}
@@ -231,17 +231,17 @@ To reproduce and fabricate PPPS-2 thin-film heterostructures, wet-lab facilities
 \subsection{Step 3: Terahertz Microcavity Metallization \& Contact Vias}
 \begin{itemize}
     \item Spin-coat PMMA electron-beam resist ($200\text{ nm}$).
-    \item Pattern continuous distributed planar microcavity grid via E-beam lithography ($100\text{ kV}$, dose $800\ \mu\text{C/cm}^2$) incorporating four $500\ \mu\text{m}$ corner clear apertures.
-    \item Etch localized vias through the $Al_2O_3$ cap via $Ar^+$ ion beam.
-    \item Electron-beam evaporate $1.5\text{ nm } Cr$ non-gettering adhesion layer followed by $50\text{ nm } Au$.
+    \item Pattern continuous distributed planar microcavity grid via E-beam lithography ($100\text{ kV}$, dose $800\ \mu\text{C/cm}^2$) incorporating four $500\ \mu\text{m} \times 500\ \mu\text{m}$ corner exclusion clear apertures in the top gold cavity mesh.
+    \item Prior to contact metallization, reactive ion etching (RIE/$Ar^+$ milling) opens localized vias through the $5\text{ nm } Al_2O_3$ cap within these exclusion zones.
+    \item Electron-beam evaporate $1.5\text{ nm } Cr$ non-gettering adhesion layer followed by $50\text{ nm } Au$ to deposit contact pads into the vias, wire-bonding directly to the buried $Sr_{0.85}La_{0.15}CuO_2$ bilayer while maintaining complete electrical isolation from the surrounding top cavity ground plane.
     \item Lift-off in warm acetone ($50^\circ\text{C}$) with gentle agitation.
 \end{itemize}
 
-\subsection{Step 4: Low-Temperature Oxygen/Ozone Dwell}
+\subsection{Step 4: Final Low-Temperature Activated Oxygen Anneal}
 \begin{itemize}
-    \item Load metallized chip into a low-pressure quartz tube furnace.
-    \item Dwell at \textbf{$180^\circ\text{C}\text{ to }200^\circ\text{C}$} for $30\text{ minutes}$ under dynamic low-pressure activated ozone ($P = 25\text{ mTorr}$).
-    \item Restores in-plane oxygen stoichiometry ($[\text{O}] \ge 1.98$) while strictly preventing apical oxygen intercalation into the empty $A$-site planes.
+    \item Load metallized chip into a vacuum annealing chamber.
+    \item Dwell at \textbf{$180^\circ\text{C}\text{ to }200^\circ\text{C}$} for $30\text{ minutes}$ under dynamic low-pressure activated oxygen/ozone ($P(O_3) \sim 10\text{--}50\text{ mTorr}$), or controlled low-partial-pressure $O_2$ ($<0.1\text{ atm}$).
+    \item Selectively heals in-plane $[CuO_2]$ vacancies to $[O] \ge 1.98$ while remaining strictly below the kinetic activation threshold for apical oxygen intercalation into the empty $A$-site planes.
 \end{itemize}
 
 \section{Experimental Measurement Protocols}
@@ -250,7 +250,7 @@ Laboratories evaluating PPPS-2 samples must employ the following three non-destr
 
 \subsection{Four-Point Vanishing Resistivity (DC/AC)}
 \begin{itemize}
-    \item Four-point van der Pauw configuration wire-bonded directly to the four isolated corner contact vias (penetrating to the buried $Sr_{0.85}La_{0.15}CuO_2$ layer).
+    \item Four-point van der Pauw configuration wire-bonded directly to the four isolated corner contact vias through the $500\ \mu\text{m}$ exclusion apertures (penetrating to the buried $Sr_{0.85}La_{0.15}CuO_2$ layer, electrically isolated from the top Au cavity ground plane).
     \item Excitation current: $I = 10\ \mu\text{A}$ to $1\text{ mA}$.
     \item Requirement: Sharp resistive drop at $T_c \ge 310\text{ K}$ with residual resistivity $\rho < 10^{-9}\ \Omega\cdot\text{cm}$ at $300\text{ K}$.
 \end{itemize}
